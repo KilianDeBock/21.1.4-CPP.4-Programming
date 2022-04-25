@@ -1,5 +1,5 @@
-import Greeting from "./Greeting.js";
-import GreetingWithClass from "./GreetingWithClass";
 import ClockWithClass from "./ClockWithClass";
+import Clock from "./Clock";
+import ThemeMode from "./ThemeMode";
 
-export { Greeting, GreetingWithClass, ClockWithClass };
+export { ClockWithClass, Clock, ThemeMode };

@@ -9,15 +9,17 @@ class ClockWithClass extends React.Component {
   }
 
   tick() {
-    this.setState({ date: new Date() });
+    const date = new Date();
+    date.setUTCHours(date.getUTCHours() + (this.props?.utc ?? 0));
+    this.setState({ date });
   }
 
   componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
+    this.timerId = setInterval(() => this.tick(), 500);
   }
 
   componentWillUnmount() {
-    clearInterval(this.timerID);
+    clearInterval(this.timerId);
   }
 
   render() {

@@ -1,29 +1,24 @@
 import "./App.css";
-import { ClockWithClass, Greeting, GreetingWithClass } from "./components";
+import { Clock, ClockWithClass, ThemeMode } from "./components";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
   return (
     <div className="App">
+      <ThemeMode />
       <ClockWithClass />
-      <Greeting message="Greetings Earthling" />
-      <Greeting message={"Like Bash Love Code Maken 8331 shit"} />
-      <Greeting message={"Oudenaarde here we come"} />
-      <GreetingWithClass message={"Oudenaarde here we come"} />
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ClockWithClass utc={1} />
+      <ClockWithClass utc={-2} />
+      <Clock />
+      <Clock utc={1} />
+      <Clock utc={count} />
+      <div>
+        <p>Count: {count}</p>
+        <button onClick={() => setCount(count + 1)}>+</button>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
