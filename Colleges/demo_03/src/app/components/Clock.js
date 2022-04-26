@@ -19,8 +19,9 @@ const Clock = ({ utc = 0 }) => {
 
   return (
     <div className="digital-clock">
-      <p>{date.toLocaleTimeString()}</p>
-      <p>{date.getMilliseconds()}</p>
+      <p>
+        {date.toLocaleTimeString()}:{date.getMilliseconds()}
+      </p>
     </div>
   );
 };
