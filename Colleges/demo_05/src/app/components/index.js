@@ -3,4 +3,6 @@ import EssayForm from "./EssayForm";
 import JobsForm from "./JobsForm";
 import PostForm from "./PostForm";
 
-export { NameForm, EssayForm, JobsForm, PostForm };
+import { DimmedLamp, Dimmer } from "./dimmer";
+
+export { NameForm, EssayForm, JobsForm, PostForm, Dimmer, DimmedLamp };

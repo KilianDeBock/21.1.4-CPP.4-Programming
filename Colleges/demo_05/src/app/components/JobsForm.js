@@ -64,10 +64,10 @@ const JobsForm = () => {
             ))}
         </select>
       </label>
-      <lable>
+      <label>
         Attach files:
         <input type="file" multiple={true} onChange={handleFilesOnChange} />
-      </lable>
+      </label>
       <input type="submit" value="Submit" />
     </form>
   );
