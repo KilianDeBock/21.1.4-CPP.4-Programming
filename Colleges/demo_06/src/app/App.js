@@ -1,32 +1,18 @@
 import "./App.css";
-import {
-  DimmedLamp,
-  Dimmer,
-  EssayForm,
-  JobsForm,
-  NameForm,
-  PostForm,
-} from "./components";
-import { useState } from "react";
+import { Alert, AlertSuccess, Dialog, SplitPane } from "./components";
 
 const App = () => {
-  const [lampColor, setLampColor] = useState("rgb(0,0,0)");
-  const handleDimmerValue = (v) => {
-    setLampColor(`rgb(${v}, ${v}, ${v})`);
-  };
-
   return (
     <div className="app">
-      <Dimmer val={handleDimmerValue} />
-      <DimmedLamp lampColor={lampColor} />
-      <h1>{"_".repeat(50)}</h1>
-      <NameForm />
-      <h1>{"_".repeat(50)}</h1>
-      <EssayForm />
-      <h1>{"_".repeat(50)}</h1>
-      <JobsForm />
-      <h1>{"_".repeat(50)}</h1>
-      <PostForm />
+      <Alert></Alert>
+      <AlertSuccess></AlertSuccess>
+      <Dialog title="updated post with Id 123453">
+        <p>updated Post with 12345</p>
+        <img src="https://lyttle.it/favicon.ico" alt="Logo" />
+      </Dialog>
+      <SplitPane left={<Dialog title="yes" />} right={<Dialog title="No" />}>
+        <p>Hello</p>
+      </SplitPane>
     </div>
   );
 };

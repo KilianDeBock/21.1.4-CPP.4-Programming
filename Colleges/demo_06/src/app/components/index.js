@@ -1,8 +1,5 @@
-import NameForm from "./NameForm";
-import EssayForm from "./EssayForm";
-import JobsForm from "./JobsForm";
-import PostForm from "./PostForm";
+import Alert, { AlertDanger, AlertSuccess } from "./Alert";
+import Dialog from "./Dialog";
+import SplitPane from "./SplitPane";
 
-import { DimmedLamp, Dimmer } from "./dimmer";
-
-export { NameForm, EssayForm, JobsForm, PostForm, Dimmer, DimmedLamp };
+export { Alert, AlertSuccess, AlertDanger, Dialog, SplitPane };
