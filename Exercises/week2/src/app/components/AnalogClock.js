@@ -1,15 +1,10 @@
 const AnalogClock = ({ utc, size = 10 }) => {
-  const clockStyle = {
-    width: `${size} rem`,
-    height: `${size} rem`,
-  };
-
-  console.log(clockStyle);
-
   return (
-    <div className="analog-clock" style={clockStyle}>
+    <div className="analog-clock" style={{ width: "10rem" }}>
       Clock :D {utc}
-      <div>Minutes</div>
+      <div className="analog-clock__hours">Hours</div>
+      <div className="analog-clock__minutes">Minutes</div>
+      <div className="analog-clock__seconds">Seconds</div>
     </div>
   );
 };
