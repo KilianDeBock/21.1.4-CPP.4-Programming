@@ -1,0 +1,11 @@
+.app {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out 0s;
+}
+
+.app--is-dark-mode {
+    background-color: black;
+    color: white;
+
+    transform: rotate(360deg);
+}
