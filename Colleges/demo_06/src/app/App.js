@@ -1,9 +1,21 @@
 import "./App.css";
-import { Alert, AlertSuccess, Dialog, SplitPane } from "./components";
+import {
+  Alert,
+  AlertSuccess,
+  BeerRandom,
+  Dialog,
+  SplitPane,
+} from "./components";
+
+import { APP_NAME } from "../data/constants.js";
+import portfolio from "../data/portfolio.json";
 
 const App = () => {
   return (
     <div className="app">
+      <BeerRandom />
+      <h1>{APP_NAME}</h1>
+      {portfolio.length}
       <Alert></Alert>
       <AlertSuccess></AlertSuccess>
       <Dialog title="updated post with Id 123453">
