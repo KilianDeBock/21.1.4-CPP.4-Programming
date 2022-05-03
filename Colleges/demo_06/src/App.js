@@ -9,10 +9,12 @@ import {
 
 import { APP_NAME } from "../data/constants.js";
 import portfolio from "../data/portfolio.json";
+import GDMGhentCasesList from "./components/GDMGhentCasesList";
 
 const App = () => {
   return (
     <div className="app">
+      <GDMGhentCasesList />
       <BeerRandom />
       <h1>{APP_NAME}</h1>
       {portfolio.length}
