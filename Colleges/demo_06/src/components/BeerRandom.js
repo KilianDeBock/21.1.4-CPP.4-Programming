@@ -1,5 +1,5 @@
 import { AlertDanger } from "./Alert";
-import useFetch from "../../hooks/useFetch";
+import useFetch from "../hooks/useFetch";
 
 const BEER_API_RANDOMBEER = "https://random-data-api.com/api/beer/random_beer";
 

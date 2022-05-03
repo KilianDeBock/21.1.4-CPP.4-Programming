@@ -7,13 +7,14 @@ import {
   SplitPane,
 } from "./components";
 
-import { APP_NAME } from "../data/constants.js";
-import portfolio from "../data/portfolio.json";
+import "bootstrap/dist/css/bootstrap.css";
+import { APP_NAME } from "./data/constants.js";
+import portfolio from "./data/portfolio.json";
 import GDMGhentCasesList from "./components/GDMGhentCasesList";
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="App">
       <GDMGhentCasesList />
       <BeerRandom />
       <h1>{APP_NAME}</h1>
