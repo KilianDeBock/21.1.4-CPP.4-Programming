@@ -1,14 +1,12 @@
 import { useCallback } from "react";
 
-const ThemeToggle = ({ isDarkMode, onThemeChanged }) => {
-  const handleClick = useCallback(() => {
-    if (typeof onThemeChanged === "function") {
-      onThemeChanged(!isDarkMode);
-    }
-  }, [isDarkMode, onThemeChanged]);
+import { useThemeContext } from "../contexts";
+
+const ThemeToggle = () => {
+  const { isDarkMode, handleThemeChange } = useThemeContext();
 
   return (
-    <button onClick={handleClick}>
+    <button onClick={() => handleThemeChange(!isDarkMode)}>
       {isDarkMode ? "Dark Theme" : "Light Theme"}
     </button>
   );
