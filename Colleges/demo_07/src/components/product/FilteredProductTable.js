@@ -1,18 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 import ProductTable from "./ProductTable";
 import SearchBar from "./SearchBar";
 
-const FilteredProductTable = ({products}) => {
-  const [filterText, setFilterText] = useState('');
+const FilteredProductTable = ({ products }) => {
+  const [filterText, setFilterText] = useState("");
   const [inStockOnly, setInStockOnly] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState(products);
 
   useEffect(() => {
-    let p = products.filter(p => p.name.toLowerCase().indexOf(filterText.toLowerCase()) > -1 || p.category.toLowerCase().indexOf(filterText.toLowerCase()) > -1);
+    let p = products.filter(
+      (p) =>
+        p.name.toLowerCase().indexOf(filterText.toLowerCase()) > -1 ||
+        p.category.toLowerCase().indexOf(filterText.toLowerCase()) > -1
+    );
 
     if (inStockOnly) {
-      p = p.filter(p => p.stocked === true);
+      p = p.filter((p) => p.stocked === true);
     }
 
     setFilteredProducts(p);
@@ -28,10 +32,15 @@ const FilteredProductTable = ({products}) => {
 
   return (
     <>
-      <SearchBar filterText={filterText} inStockOnly={inStockOnly} onFilterTextChange={handleOnFilterTextChange} onInStockChange={handleOnInStockChange}/>
+      <SearchBar
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+        onFilterTextChange={handleOnFilterTextChange}
+        onInStockChange={handleOnInStockChange}
+      />
       <ProductTable products={filteredProducts} />
       <ProductTable products={filteredProducts} />
     </>
-  )
+  );
 };
 export default FilteredProductTable;

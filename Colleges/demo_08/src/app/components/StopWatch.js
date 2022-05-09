@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import './StopWatch.css';
+import "./StopWatch.css";
 
 const StopWatch = () => {
   const [count, setCount] = useState(0);
@@ -8,7 +8,7 @@ const StopWatch = () => {
   const siRef = useRef(null);
 
   const startWatch = useCallback(() => {
-    timerIdRef.current = setInterval(() => setCount(c => c + 1), 1000);
+    timerIdRef.current = setInterval(() => setCount((c) => c + 1), 1000);
     setCount(0);
   }, []);
 
@@ -17,11 +17,10 @@ const StopWatch = () => {
   }, []);
 
   useEffect(() => {
-    if(siRef !== null && siRef.current !== null) {
+    if (siRef !== null && siRef.current !== null) {
       siRef.current.focus();
     }
-  }, [])
-  
+  }, []);
 
   return (
     <div className="stopwatch">
@@ -30,7 +29,7 @@ const StopWatch = () => {
         <button onClick={startWatch}>Start</button>
         <button onClick={stopWatch}>Stop</button>
       </div>
-      <div className="stopwatch__interactive" >
+      <div className="stopwatch__interactive">
         Give me focus during startup / rendering
       </div>
     </div>

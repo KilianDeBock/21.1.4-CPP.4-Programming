@@ -1,8 +1,10 @@
-import './ThemedButton.css';
+import "./ThemedButton.css";
 
-const ThemeButton = ({isDarkMode}) => {
+const ThemeButton = ({ isDarkMode }) => {
   return (
-    <button className={`btn ${isDarkMode ? 'btn--dark' : 'btn-light'}`}>Styled Button</button>
+    <button className={`btn ${isDarkMode ? "btn--dark" : "btn-light"}`}>
+      Styled Button
+    </button>
   );
 };
 

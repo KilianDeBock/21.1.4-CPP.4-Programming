@@ -1,7 +1,4 @@
-import FilteredProductTable from './FilteredProductTable';
-import SearchBar from './SearchBar';
+import FilteredProductTable from "./FilteredProductTable";
+import SearchBar from "./SearchBar";
 
-export {
-  FilteredProductTable,
-  SearchBar,
-}
+export { FilteredProductTable, SearchBar };

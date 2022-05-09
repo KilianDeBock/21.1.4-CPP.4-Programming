@@ -1,22 +1,23 @@
 import ProductRow from "./ProductRow";
 import ProductCategoryRow from "./ProductCategoryRow";
 
-import { Table } from 'reactstrap';
+import { Table } from "reactstrap";
 
-import styles from  './ProductTable.module.css';
+import styles from "./ProductTable.module.css";
 
-const ProductTable = ({products}) => {
+const ProductTable = ({ products }) => {
   const rows = [];
   let lastCategory = null;
   products.forEach((product, index) => {
     if (product.category !== lastCategory) {
       rows.push(
-        <ProductCategoryRow key={product.category} category={product.category} />
+        <ProductCategoryRow
+          key={product.category}
+          category={product.category}
+        />
       );
-    };
-    rows.push(
-      <ProductRow key={index} product={product} />
-    );
+    }
+    rows.push(<ProductRow key={index} product={product} />);
     lastCategory = product.category;
   });
   return (
@@ -27,10 +28,8 @@ const ProductTable = ({products}) => {
           <th>Price</th>
         </tr>
       </thead>
-      <tbody>
-        {rows}
-      </tbody>
+      <tbody>{rows}</tbody>
     </Table>
-  )
+  );
 };
 export default ProductTable;
