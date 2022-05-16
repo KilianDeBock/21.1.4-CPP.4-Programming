@@ -8,6 +8,7 @@ logs
 cogs/.DS_Store
 .DS_Store
 .env
+*.env
 
 # Logs
 logs
