@@ -1,0 +1,41 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+
+  span {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  img {
+    border: 1px solid #ebebeb;
+    border-radius: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.info {
+  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  font-style: normal;
+}
+
+.title {
+  font-size: 1.2rem;
+}
